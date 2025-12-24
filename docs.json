@@ -24,7 +24,7 @@
     },
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Rehberler",
         "groups": [
           {
             "group": "Getting started",
@@ -32,6 +32,12 @@
               "tr"
             ]
           }
+        ]
+      },
+      {
+        "tab": "Guides",
+        "pages": [
+          "en"
         ]
       }
     ]
@@ -62,7 +68,6 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
       "github": "https://github.com/EPINCMS",
       "linkedin": "https://linkedin.com/company/epincms"
     }
