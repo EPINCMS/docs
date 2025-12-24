@@ -9,35 +9,33 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "global": {
-      "languages": [
-        {
-          "language": "en",
-          "href": "https://docs.epincms.com/en"
-        },
-        {
-          "language": "tr",
-          "default": true,
-          "href": "https://docs.epincms.com/tr"
-        }
-      ]
-    },
-    "tabs": [
+    "languages": [
       {
-        "tab": "Rehberler",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Getting started",
+            "tab": "Guides",
             "pages": [
-              "tr"
+              "en"
             ]
           }
         ]
       },
       {
-        "tab": "Guides",
-        "pages": [
-          "en"
+        "language": "tr",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "Rehberler",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "tr"
+                ]
+              }
+            ]
+          }
         ]
       }
     ]
