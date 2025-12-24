@@ -13,12 +13,12 @@
       "languages": [
         {
           "language": "en",
-          "href": "https://mintlify.com"
+          "href": "https://docs.epincms.com/en"
         },
         {
           "language": "tr",
           "default": true,
-          "href": "https://mintlify.com"
+          "href": "https://docs.epincms.com/tr"
         }
       ]
     },
