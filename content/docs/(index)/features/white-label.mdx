@@ -1,0 +1,48 @@
+---
+title: "White Label"
+description: Mağazanızı tamamen kendi marka kimliğinizle sunun; epincms izleri görünmez.
+---
+
+## Genel Bakış
+
+White Label özelliği, mağazanızın tüm görünür alanlarında (arayüz, e-postalar, faturalar, panel) epincms markasının yerine kendi marka kimliğinizin görünmesini sağlar. **Business** planında kullanılabilir.
+
+---
+
+## Kapsam Alanları
+
+| Alan | White Label ile |
+|------|----------------|
+| **Domain** | Kendi alan adınız (örn. magaza.markaniz.com) |
+| **E-posta Bildirimleri** | Gönderen adı ve e-postası sizin markanız |
+| **Faturalar & Belgeler** | Logo, şirket adı ve bilgileri markanıza göre |
+| **Yönetim Paneli URL** | admin.markaniz.com gibi özel subdomain |
+| **Hata Sayfaları** | 404/500 sayfalarında kendi tasarımınız |
+| **Footer & Kredi** | "Powered by epincms" ibaresi kaldırılır |
+| **Mobil manifest** | PWA ikon ve uygulama adı kendi markanız |
+
+---
+
+## Kurulum
+
+1. DNS ayarlarınızdan özel domaininizi sisteme yönlendirin.
+2. Yönetim panelinden **Ayarlar → Marka Kimliği** bölümünde logo, renk paleti ve şirket bilgilerini girin.
+3. SSL sertifikası otomatik olarak provisioned edilir.
+4. E-posta göndericisi için SPF/DKIM kayıtlarını DNS'e ekleyin.
+5. Test siparişi ve test e-postası göndererek doğrulayın.
+
+---
+
+## Marka Yönetimi
+
+Yönetim panelinden logo (açık/koyu tema uyumlu), favikon, birincil renk ve şirket iletişim bilgilerini güncelleyebilirsiniz. Değişiklikler anında yayına girer.
+
+---
+
+## Sıkça Sorulan Sorular
+
+**White label sonrasında müşterilerim mağazanın epincms altyapısını kullandığını anlayabilir mi?**
+Görünür hiçbir alanda epincms izine rastlanmaz. Teknik HTTP başlıkları da temizlenir.
+
+**Birden fazla marka için ayrı mağaza açabilir miyim?**
+Multi-tenant yapısı sayesinde farklı domain ve marka kimliğine sahip birden fazla mağaza aynı hesap üzerinden yönetilebilir; her biri tamamen bağımsız white label olarak görünür.

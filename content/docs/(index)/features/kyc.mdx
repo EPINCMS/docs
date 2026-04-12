@@ -1,0 +1,59 @@
+---
+title: "KYC (Kimlik Doğrulama)"
+description: Müşterilerinizin kimlik doğrulamasını zorunlu kılarak güvenli işlem ortamı oluşturun.
+---
+
+## Genel Bakış
+
+KYC (Know Your Customer — Müşterini Tanı), mağazanızın belirli özelliklerini veya işlemlerini kimlik doğrulaması yapmış kullanıcılarla sınırlandırmanızı sağlar. Özellikle yüksek değerli dijital ürünler, gaming sektörü ve finansal işlem içeren platformlar için kritiktir. **Pro ve üzeri** planlarda kullanılabilir.
+
+---
+
+## Doğrulama Seviyeleri
+
+| Seviye | Gereksinimler | Tanınan Limit |
+|--------|------------|--------------|
+| **Seviye 0** | Kayıt yok | Temel görüntüleme |
+| **Seviye 1** | E-posta + telefon doğrulaması | Düşük limitli işlemler |
+| **Seviye 2** | Kimlik belgesi (TC/Pasaport) | Orta limitli işlemler |
+| **Seviye 3** | Kimlik + Yüz doğrulaması | Yüksek limitli işlemler |
+
+---
+
+## Doğrulama Akışı
+
+1. Kullanıcı belirtilen eşiği aşan bir işlem yapmaya çalışır.
+2. Sistem mevcut KYC seviyesini kontrol eder.
+3. Seviye yetersizse kullanıcıdan ek belge yüklemesi istenir.
+4. Belgeler yönetici panelinde incelenir ve onaylanır / reddedilir.
+5. Onay sonrasında kullanıcı işlemine devam edebilir.
+
+---
+
+## Yönetici Paneli
+
+- Bekleyen KYC talepleri listesi
+- Belge görüntüleme ve inceleme
+- Tek tıkla onay / red
+- Reddetme nedeni bildirim alanı
+- Kullanıcı KYC geçmişi
+
+---
+
+## Zorunlu Kılma Senaryoları
+
+KYC zorunluluğu şu durumlara bağlanabilir:
+- Belirli tutarın üzerindeki siparişler
+- Belirli ürün kategorileri (örn. yüksek değerli dijital içerik)
+- Para çekme veya bakiye işlemleri
+- Listing sistemi üzerinden içerik satışı
+
+---
+
+## Sıkça Sorulan Sorular
+
+**Yüklenen belgeler güvende mi?**
+Belgeler şifreli olarak depolanır; sadece yetkili yöneticiler erişebilir. Veriler ilgili mevzuata uygun şekilde saklama süresi dolduktan sonra imha edilir.
+
+**KYC reddedilen kullanıcı tekrar başvurabilir mi?**
+Evet, red gerekçesi iletildikten sonra kullanıcı düzeltilmiş belge ile yeniden başvurabilir.

@@ -1,0 +1,54 @@
+---
+title: "Sepet Yönetimi"
+description: Sipariş öncesi sepet adımlarını, müşteri sepet deneyimini ve sepet işlemlerini yönetin.
+---
+
+## Genel Bakış
+
+Sepet Yönetimi, müşterilerin ürünleri alışveriş sepetine ekleyerek toplu sipariş vermesini sağlar. **Growth ve Business** planlarında kullanılabilir. Starter ve Pro planlarda müşteriler doğrudan satın alma (sepetsiz checkout) akışını kullanır.
+
+---
+
+## Müşteri Akışı
+
+```
+Ürün Sayfası → "Sepete Ekle" → Sepet Sayfası → Ödeme
+```
+
+---
+
+## Özellikler
+
+| Özellik | Açıklama |
+|---------|----------|
+| **Çoklu Ürün** | Farklı ürünler aynı sepette toplanabilir. |
+| **Adet Güncelleme** | Sepette ürün adedi artırılıp azaltılabilir. |
+| **Kupon Kodu Uygulama** | Ödeme öncesi kupon kodu girilebilir. |
+| **Fiyat Hesaplama** | Kampanya, rol fiyatı ve kupon anında sepete yansır. |
+| **Kayıtlı Sepet** | Oturum açmış kullanıcı sepeti cihazlar arasında senkronize kalır. |
+
+---
+
+## Fiyat Motoru ile Entegrasyon
+
+Sepette gösterilen fiyat, tüm indirim katmanları hesaplandıktan sonra oluşur:
+
+1. Ürün taban fiyatı
+2. Ürün bazlı iskonto
+3. Rol bazlı özel fiyat (varsa diğer adımlar atlanır)
+4. Kampanya indirimleri
+5. Kupon kodu
+6. Kargo
+
+---
+
+## Sepetsiz Checkout ile Farkı
+
+| | Sepet Yönetimi | Sepetsiz Checkout |
+|-|---------------|-------------------|
+| **Çoklu Ürün** | ✓ | ✗ |
+| **Kupon Uygulama** | ✓ | Sınırlı |
+| **Kayıtlı Sepet** | ✓ | ✗ |
+| **Hız** | Standart | Daha Hızlı |
+
+Sepetsiz Checkout hakkında: [Hızlı Satın Alma](/docs/features/fast-checkout).

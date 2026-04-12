@@ -1,0 +1,55 @@
+---
+title: "Ürün Stok Yönetimi"
+description: Ürün stoklarınızı takip edin, güncelleyin ve tükenen kalemleri yönetin.
+---
+
+## Genel Bakış
+
+Stok Yönetimi modülü, mağazanızdaki ürünler için stok adetlerini takip etmenizi ve sipariş süreçleriyle otomatik entegre şekilde yönetmenizi sağlar. Tüm planlarda kullanılabilir.
+
+---
+
+## Nasıl Çalışır?
+
+Her ürün için stok girişi yapabilirsiniz. Bir sipariş tamamlandığında sistem ilgili stok kalemini otomatik olarak düşürür; stok tükendiğinde ürün satışa kapanır.
+
+### Stok Tipleri
+
+| Tip | Açıklama |
+|-----|----------|
+| **Manuel Stok** | Ürüne doğrudan adet girilir (örn: 50 adet). |
+| **Dijital Stok (Kod/Key)** | Sisteme yüklenen kodlar, anahtarlar veya e-pin'ler sırayla verilir. Her sipariş bir kodu tüketerek teslim eder. |
+
+---
+
+## Stok Ekleme
+
+1. **Ürünler → İlgili Ürün → Stok Sekmesi** yolunu izleyin.
+2. Yeni stok satırı ekleyin veya mevcut stoku düzenleyin.
+3. Dijital kodlar için toplu yapıştırma veya CSV ile yükleme yapabilirsiniz.
+
+---
+
+## Stok Durumları
+
+| Durum | Açıklama |
+|-------|----------|
+| **Stokta** | Ürün satşa açık, yeterli stok mevcut. |
+| **Az Stok** | Tanımlanan eşiğin altına düşüldüğünde uyarı üretilir. |
+| **Stok Yok** | Stok sıfırlandığında ürün otomatik olarak satışa kapanır. |
+
+---
+
+## Otomatik Teslimat
+
+Dijital stok (kod/key) için sipariş tamamlandığında stoktan ilk uygun kod otomatik müşteriye gönderilir. Manuel müdahale gerekmez.
+
+---
+
+## Sıkça Sorulan Sorular
+
+**Stok tükenince ürün kendiğinden kapanır mı?**
+Evet. Stok sıfıra düştüğünde ürün satın alınamaz hale gelir; ürün sayfasında "Stokta Yok" mesajı belirir.
+
+**Aynı ürün için birden fazla stok kaynağı tanımlayabilir miyim?**
+Evet. Farklı tedarikçilerden veya farklı tiplerinize ait birden fazla stok satırı aynı ürüne bağlanabilir.

@@ -1,0 +1,49 @@
+---
+title: "Önbellek Motoru"
+description: Sayfa yükleme sürelerini minimize eden akıllı API önbellek altyapısı.
+---
+
+## Genel Bakış
+
+Önbellek Motoru, sık erişilen API yanıtlarını ve sayfa verilerini önbelleğe alarak sunucu yükünü düşürür ve ziyaretçilere daha hızlı bir alışveriş deneyimi sunar. **Tüm planlarda** otomatik olarak etkindir.
+
+---
+
+## Nasıl Çalışır?
+
+1. Ziyaretçi bir ürün listesi veya sayfa isteğinde bulunur.
+2. Sistem önce önbellekte uygun bir yanıt arar.
+3. Önbellekte geçerli veri varsa veritabanına gitmeden anında yanıt verir.
+4. Önbellekte veri yoksa veritabanından okur, yanıtı önbelleğe kaydeder.
+5. Ürün güncelleme, stok değişikliği gibi olaylarda ilgili önbellek otomatik temizlenir.
+
+---
+
+## Otomatik Geçersiz Kılma
+
+Herhangi bir veri değiştiğinde sistem etkilenen sayfaların önbelleklerini otomatik olarak temizler:
+
+| Olay | Temizlenen Önbellekler |
+|------|----------------------|
+| Ürün güncelleme | Ürün detay, kategori listesi |
+| Stok değişimi | Ürün detay, arama sonuçları |
+| Fiyat güncellemesi | Ürün detay, kampanya sayfaları |
+| Slider/Story değişimi | Ana sayfa önbelleği |
+
+---
+
+## Ziyaretçi Etkisi
+
+- İlk ziyaretçi tam yükleme süresini yaşar (önbellek doldurulur).
+- Sonraki ziyaretçiler önemli ölçüde daha hızlı sayfa yüklemesi elde eder.
+- Yüksek trafik dönemleri (kampanya günleri) performans kaybı minimumdur.
+
+---
+
+## Sıkça Sorulan Sorular
+
+**Önbelleği manuel temizleyebilir miyim?**
+Evet, yönetim panelinden tam önbellek temizleme işlemi başlatılabilir. Özellikle toplu fiyat güncellemelerinden sonra önerilir.
+
+**Önbellek süresi ne kadar?**
+Varsayılan TTL (yaşam süresi) yapılandırmaya göre değişir; içerik türüne göre 5 dakika ile 24 saat arasında olabilir.

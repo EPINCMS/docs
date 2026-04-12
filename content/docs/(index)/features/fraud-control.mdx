@@ -1,0 +1,73 @@
+---
+title: "Dolandırıcılık Önleme Motoru"
+description: Otomatik kural tabanlı fraud tespiti ile siparişlerinizi ve platformunuzu koruyun.
+---
+
+## Genel Bakış
+
+Dolandırıcılık Önleme Motoru, şüpheli işlemleri önceden tanımlanmış kurallar aracılığıyla otomatik olarak tespit eder, işaretler veya engeller. Temel koruma **Pro ve üzeri** planlarda, gelişmiş kural seti **Business** planında kullanılabilir.
+
+---
+
+## Plan Bazlı Özellikler
+
+| Özellik | Pro | Growth | Business |
+|---------|-----|--------|----------|
+| Temel IP ve hız kontrolü | ✓ | ✓ | ✓ |
+| Cihaz parmak izi analizi | — | ✓ | ✓ |
+| Kampanya suistimali tespiti | — | ✓ | ✓ |
+| Gelişmiş davranışsal analiz | — | — | ✓ |
+| Kara liste yönetimi | ✓ | ✓ | ✓ |
+| Manuel inceleme kuyruğu | — | ✓ | ✓ |
+
+---
+
+## Kural Kategorileri
+
+### Hız Kuralları
+- **IP Hız Kontrolü**: Kısa sürede aynı IP'den çok sayıda sipariş
+- **Hesap Hız Kontrolü**: Tek hesaptan anormal işlem yoğunluğu
+
+### Kimlik Kuralları
+- **Çoklu Hesap Tespiti**: Aynı cihazdan birden fazla hesap açılması
+- **E-posta Örüntü Analizi**: Şüpheli e-posta formatları (descartes mail vb.)
+
+### İşlem Kuralları
+- **Yüksek Değerli Sipariş**: Belirlenen eşiğin üzerindeki siparişler otomatik incelemeye alınır
+- **Adres Tutarsızlığı**: Fatura ve teslimat adresinin riskli kombinasyonları
+
+### Kampanya Kuralları
+- **Kupon Suistimali**: Aynı kuponun birden fazla hesaptan kullanımı
+- **Referans Döngüsü**: Kendi kendine referans oluşturma girişimi
+
+### Kara Liste
+- IP adresi, e-posta veya cihaz kimliği kara listeye alınabilir
+- Kara listeli kaynaklardan gelen işlemler otomatik reddedilir
+
+---
+
+## İşlem Akışı
+
+1. Sipariş sisteme gelir.
+2. Motor tüm aktif kurallar karşısında siparişi sorgular.
+3. Kural ihlali yoksa sipariş normal akışa girer.
+4. Düşük riskli ihlalde sipariş işaretlenerek manuel inceleme kuyruğuna alınır.
+5. Yüksek riskli ihlalde sipariş otomatik reddedilir ve kullanıcı bilgilendirilir.
+
+---
+
+## Yönetici Paneli
+
+- Fraud log: Tüm kural tetiklemeleri tarih ve nedenle kaydedilir
+- Manuel inceleme kuyruğu: Şüpheli siparişleri onaylama veya reddetme
+- Kural yönetimi: Kuralları etkinleştir/devre dışı bırak, eşik değerlerini ayarla
+
+---
+
+## Sıkça Sorulan Sorular
+
+**Yanlışlıkla engellenen bir müşteri ne yapmalı?**
+Müşteri destek talebi açabilir; yönetici kara listeden çıkararak veya itirazı onaylayarak sorunu çözebilir.
+
+**Kendi kurallarımı ekleyebilir miyim?**
+Mevcut kuralların parametrelerini (eşik değerleri, eylem türleri) yönetim panelinden özelleştirebilirsiniz.

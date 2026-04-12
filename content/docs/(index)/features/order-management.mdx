@@ -1,0 +1,57 @@
+---
+title: "Sipariş Yönetimi"
+description: Gelen siparişleri listeleyin, takip edin ve müşteri işlemlerini yönetin.
+---
+
+## Genel Bakış
+
+Sipariş Yönetimi, mağazanıza gelen tüm siparişleri merkezi bir panelden görüntülemenizi, durumlarını takip etmenizi ve müşteri işlemlerini yönetmenizi sağlar. Tüm planlarda kullanılabilir.
+
+---
+
+## Sipariş Akışı
+
+```
+Müşteri Ödeme Yapar
+        ↓
+Sipariş Oluşturulur (Beklemede)
+        ↓
+Ödeme Onaylanır
+        ↓
+Ürün Teslim Edilir (Otomatik/Manuel)
+        ↓
+Sipariş Tamamlandı
+```
+
+---
+
+## Sipariş Durumları
+
+| Durum | Açıklama |
+|-------|----------|
+| **Beklemede** | Ödeme henüz onaylanmadı |
+| **İşleniyor** | Ödeme onaylandı, teslimat hazırlanıyor |
+| **Tamamlandı** | Ürün başarıyla teslim edildi |
+| **İptal Edildi** | Sipariş iptal edildi |
+| **İade Edildi** | Müşteriye iade yapıldı |
+
+---
+
+## Admin Panel Özellikleri
+
+- **Sipariş Listesi**: Tarih, durum, müşteri ve tutara göre filtrelenebilir.
+- **Sipariş Detayı**: Ürün bilgileri, uygulanan indirimler, ödeme yöntemi, teslimat içeriği.
+- **Manuel Müdahale**: Dijital teslimatı yeniden gönderin, durumu güncelleyin.
+- **Notlar**: Sipariş üzerine admin notu ekleyin.
+
+---
+
+## Otomatik Teslimat
+
+Dijital ürünlerde (stok kodu/key, indirilebilir dosya) ödeme onaylanır onaylanmaz sistem teslimatı otomatik gerçekleştirir. Müşteri siparişi anında alır.
+
+---
+
+## Müşteri Paneli
+
+Müşteriler kendi sipariş geçmişlerini görebilir, teslim edilen kodları/dosyaları yeniden görüntüleyebilir ve değerlendirme bırakabilirler.

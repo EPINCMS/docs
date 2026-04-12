@@ -1,0 +1,56 @@
+---
+title: "Çoklu Ödeme Yönetimi"
+description: Kredi kartı, havale, cüzdan ve alternatif ödeme seçenekleri.
+---
+
+## Genel Bakış
+
+EPINCMS, birden fazla ödeme yöntemi ve ödeme sağlayıcısını eş zamanlı olarak aktif tutmanıza imkân tanır. Tüm planlarda çoklu ödeme altyapısı mevcuttur.
+
+---
+
+## Desteklenen Ödeme Tipleri
+
+| Tip | Örnekler |
+|-----|----------|
+| **Sanal POS (Kredi/Banka Kartı)** | Iyzico, PayTR, Stripe, Param vb. |
+| **Havale / EFT** | Manuel onay akışıyla |
+| **Dijital Cüzdan** | Platforma entegre bakiye sistemi |
+| **Alternatif Yöntemler** | Kripto, kapıda ödeme (yapılandırmaya bağlı) |
+
+---
+
+## Ödeme Sağlayıcı Yapılandırması
+
+Her ödeme sağlayıcısı için ayrı bir yapılandırma paneli mevcuttur:
+1. Yönetim panelinden **Ödeme → Sağlayıcılar** bölümüne gidin.
+2. İlgili sağlayıcıyı seçin ve API bilgilerini girin.
+3. Test modu ile üretime almadan önce ödeme akışını doğrulayın.
+
+---
+
+## Para Birimi Uyumu
+
+Her ödeme sağlayıcısı yalnızca desteklediği para birimleriyle çalışır. Örneğin TRY işlem yapan bir sanal POS, USD sepet tutarlarını dönüştürerek veya reddederek davranır; bu davranış sağlayıcıya göre değişir.
+
+---
+
+## Ödeme Akışı
+
+```
+Müşteri Ödeme Yöntemi Seçer
+         ↓
+EPINCMS İlgili Sağlayıcıya Yönlendirir
+         ↓
+Sağlayıcı Ödemeyi İşler
+         ↓
+Webhook ile Onay/Red Gelir
+         ↓
+Sipariş Durumu Güncellenir
+```
+
+---
+
+## Webhook Güvenliği
+
+Ödeme sağlayıcılarından gelen webhook bildirimleri imza doğrulamasıyla doğrulanır. Sahte veya manipüle edilmiş bildirimler reddedilir; tüm webhook olayları kayıt altına alınır.

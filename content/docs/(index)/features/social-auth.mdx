@@ -1,0 +1,53 @@
+---
+title: "Sosyal Medya ile Giriş"
+description: Müşterilerinizin Google, Discord, Twitch ve Steam hesaplarıyla hızlıca kayıt olmasını sağlayın.
+---
+
+## Genel Bakış
+
+Sosyal Giriş özelliği, kullanıcıların mağazanıza mevcut sosyal medya veya platform hesaplarıyla kayıt olmasına ve giriş yapmasına olanak tanır. Bu yöntem kayıt sürtünmesini azaltır ve dönüşüm oranını artırır. Tüm planlarda kullanılabilir.
+
+---
+
+## Desteklenen Platformlar
+
+| Platform | Kullanım Senaryosu |
+|----------|-------------------|
+| **Google** | Genel amaçlı geniş kitle |
+| **Discord** | Gaming ve oyun toplulukları |
+| **Twitch** | İçerik üreticisi ve oyun izleyicisi kitlesi |
+| **Steam** | PC oyun odaklı mağazalar |
+
+---
+
+## Kayıt Akışı
+
+1. Kullanıcı giriş / kayıt sayfasında platform butonuna tıklar.
+2. İlgili platformun OAuth sayfasına yönlendirilir ve izin verir.
+3. Platform, kullanıcı bilgilerini güvenli olarak iletir.
+4. Sistem mevcut bir hesap bulursa giriş yapar, yoksa otomatik hesap oluşturur.
+5. Kullanıcı mağazaya yönlendirilir.
+
+---
+
+## Güvenlik
+
+- Şifre mağazada saklanmaz; kimlik doğrulama tamamen platforma devredilir.
+- OAuth 2.0 standardı kullanılır.
+- E-posta çakışması durumunda hesap birleştirme akışı devreye girer.
+
+---
+
+## Yapılandırma
+
+Yönetim panelinden **Ayarlar → Sosyal Giriş** bölümünde hangi platformların etkin olacağını seçin. Her platform için ilgili gelişirici konsolundan alınan Client ID ve Client Secret girilmesi gerekir.
+
+---
+
+## Sıkça Sorulan Sorular
+
+**Kullanıcı birden fazla sosyal hesabı aynı mağaza hesabına bağlayabilir mi?**
+Evet, bir kullanıcı Google ve Discord hesabını aynı mağaza profiline bağlayabilir.
+
+**Sosyal girişi belirli platformlarla sınırlayabilir miyim?**
+Evet, yönetim panelinden istediğiniz platformu açıp kapatabilirsiniz.
