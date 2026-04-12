@@ -1,0 +1,17 @@
+services:
+  epincms_docs:
+    build: .
+    container_name: epincms_docs
+    restart: unless-stopped
+    networks:
+      - shared
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.docs.rule=Host(`docs.epincms.com`)"
+      - "traefik.http.routers.docs.priority=1"
+      - "traefik.http.routers.docs.entrypoints=web"
+      - "traefik.http.services.docs.loadbalancer.server.port=4001"
+
+networks:
+  shared:
+    external: true
