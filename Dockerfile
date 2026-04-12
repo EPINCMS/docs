@@ -4,7 +4,7 @@ WORKDIR /app
 RUN npm ci
 
 FROM node:24-alpine AS production-dependencies-env
-COPY ./package.json /app/
+COPY ./package.json package-lock.json /app/
 WORKDIR /app
 RUN npm ci --omit=dev
 
@@ -15,7 +15,7 @@ WORKDIR /app
 RUN npm run build
 
 FROM node:24-alpine
-COPY ./package.json /app/
+COPY ./package.json package-lock.json /app/
 
 ENV PORT=4001
 ENV NODE_ENV=production
